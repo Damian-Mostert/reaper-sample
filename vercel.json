@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/.reaper/vercel.js"
+      "dest": "/vercel.js"
     }
   ],
   "buildCommand": "npm run prod"
