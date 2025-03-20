@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@models/*": ["db/models/*"],
+      "@global/*": ["global/*"],
+      "@hooks/*": ["hooks/*"],
+      "@styles/*": ["views/styles/*"],
+      "@components/*": ["views/components/*"],
+      "@ts/*": ["types/*"]
+    }
+  }
+}

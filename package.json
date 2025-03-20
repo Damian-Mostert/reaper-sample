@@ -1,0 +1,24 @@
+{
+    "name": "reaper-example",
+    "version": "0.1.0-example",
+    "scripts": {
+        "build":"npx rprcli build",
+        "start":"npx rprcli start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Damian-Mostert/reaper-example.git"
+    },
+    "contributors": [
+        {
+            "name": "Damian Mostert",
+            "url": "https://github.com/Damian-Mostert"
+        }
+    ],
+    "dependencies": {
+        "rprcli": "^0.1.54-base"
+    },
+    "devDependencies": {
+        "@types/react": "^18"
+    }
+}
