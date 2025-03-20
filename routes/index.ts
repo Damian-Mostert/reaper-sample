@@ -10,7 +10,9 @@ export default function MainRoutes({
     //api's
     Group("/api",ApiRoutes)
     ///pages
-    Get("home-page","/[test]","@pagesController.home")
+    Get("home-page","/","@pagesController.home")
+    Get("test-page","/test/[...any]","@pagesController.test")
+
     Get("login-page","/login","@pagesController.login")
     Get("register-page","/register","@pagesController.register");
 }

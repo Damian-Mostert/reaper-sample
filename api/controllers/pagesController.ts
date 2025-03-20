@@ -12,6 +12,17 @@ const pageController:Controller={
                 data:request.params.test
             }
         })
+    },
+    async test(request,response){
+        response.render<HomePageProps>("test",{
+            metadata:{
+                title:"Test",
+                description:'Home',                
+            },
+            props:{
+                data:request.params.test
+            }
+        })
     }
 }
 export default pageController;
