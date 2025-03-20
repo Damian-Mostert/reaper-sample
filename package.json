@@ -4,6 +4,9 @@
     "scripts": {
         "dev": "npx rprcli dev",
         "build": "npx rprcli build",
+        "migrate": "npx rprcli migrate",
+        "rollback": "npx rprcli rollback",
+        "seed": "npx rprcli seed",
         "start": "npx rprcli start",
         "vercel": "npx rprcli vercel"
     },
