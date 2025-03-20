@@ -4,7 +4,7 @@
     "scripts": {
         "build": "npx rprcli build",
         "start": "npx rprcli start",
-        "prod":"npm i && npx rprcli build"
+        "prod": "npm i && npx rprcli build"
     },
     "repository": {
         "type": "git",
@@ -17,7 +17,7 @@
         }
     ],
     "dependencies": {
-        "rprcli": "^0.1.57-base"
+        "rprcli": "^0.1.60-base"
     },
     "devDependencies": {
         "@types/react": "^18"

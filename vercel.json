@@ -1,17 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./node_modules/rprcli/server/routes.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "./node_modules/rprcli/server/routes.js"
-      }
-    ],
-    "buildCommand": "npm run prod"
+  "version": 2,
+  "functions": {
+    ".reaper/vercel.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/.reaper/vercel.js"
+    }
+  ],
+  "buildCommand": "npm run prod"
 }
-  
