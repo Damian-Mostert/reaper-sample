@@ -1,10 +1,20 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": ".reaper/vercel/api.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["node_modules/ejs/**/*"]
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/vercel.js"
+      "dest": "/.reaper/vercel/api.js"
     }
   ],
-  "buildCommand": "npm run prod"
+  "buildCommand": "npm i "
 }
+

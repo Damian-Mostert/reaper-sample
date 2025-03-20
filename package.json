@@ -2,9 +2,10 @@
     "name": "reaper-example",
     "version": "0.1.0-example",
     "scripts": {
+        "dev": "npx rprcli dev",
         "build": "npx rprcli build",
         "start": "npx rprcli start",
-        "prod": "npm i && npx rprcli build"
+        "vercel": "npx rprcli vercel"
     },
     "repository": {
         "type": "git",
@@ -17,7 +18,8 @@
         }
     ],
     "dependencies": {
-        "rprcli": "^0.1.60-base"
+        "ejs": "latest",
+        "rprcli": "^0.1.67-base"
     },
     "devDependencies": {
         "@types/react": "^18"

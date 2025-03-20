@@ -1,3 +1,4 @@
 node_modules
-.reaper
+.reaper/out
+.reaper/temp
 .vercel

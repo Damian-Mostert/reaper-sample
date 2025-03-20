@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <% if (metadata?.title) { %>
+        <title><%= metadata.title %></title>
+    <% } %>
+    <% if (metadata?.description) { %>
+        <meta name="description" content="<%= metadata.description.replace(/"/g, '\\"') %>">
+    <% } %>
+    <% if (metadata?.author) { %>
+        <meta name="author" content="<%= metadata.author %>">
+    <% } %>
+    <% if (metadata?.keywords) { %>
+        <meta name="keywords" content="<%= metadata.keywords %>">
+    <% } %>
+    <% if (metadata?.ogTitle) { %>
+        <meta property="og:title" content="<%= metadata.ogTitle %>">
+    <% } %>
+    <% if (metadata?.ogDescription) { %>
+        <meta property="og:description" content="<%= metadata.ogDescription.replace(/"/g, '\\"') %>">
+    <% } %>
+    <% if (metadata?.ogImage) { %>
+        <meta property="og:image" content="<%= metadata.ogImage %>">
+    <% } %>
+    <% if (metadata?.ogUrl) { %>
+        <meta property="og:url" content="<%= metadata.ogUrl %>">
+    <% } %>
+    <% if (metadata?.twitterCard) { %>
+        <meta name="twitter:card" content="<%= metadata.twitterCard %>">
+    <% } %>
+    <% if (metadata?.twitterTitle) { %>
+        <meta name="twitter:title" content="<%= metadata.twitterTitle %>">
+    <% } %>
+    <% if (metadata?.twitterDescription) { %>
+        <meta name="twitter:description" content="<%= metadata.twitterDescription.replace(/"/g, '\\"') %>">
+    <% } %>
+    <% if (metadata?.twitterImage) { %>
+        <meta name="twitter:image" content="<%= metadata.twitterImage %>">
+    <% } %>
+    <% if (metadata?.favicon) { %>
+        <link rel="icon" href="<%= metadata.favicon %>" type="image/x-icon">
+    <% } %>    
+</head>
