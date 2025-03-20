@@ -12,6 +12,6 @@
         "dest": "./node_modules/rprcli/server/routes.js"
       }
     ],
-    "buildCommand": "npm run build"
+    "buildCommand": "npm run prod"
 }
   
