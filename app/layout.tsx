@@ -3,7 +3,7 @@ import "./styles/globals.scss";
 export default function MainLayout({children}){
     return <main>
         <div>
-            HEADER
+            HEADER HAHA
         </div>
         {children}
         <div>

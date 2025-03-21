@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": ".reaper/vercel/api.js",
+      "src": "vercel/api.js",
       "use": "@vercel/node",
       "config": {
         "includeFiles": ["node_modules/ejs/**/*"]
@@ -12,9 +12,9 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/.reaper/vercel/api.js"
+      "dest": "/vercel/api.js"
     }
   ],
-  "buildCommand": "npm i "
+  "buildCommand": "npm i && npm run vercel"
 }
 
