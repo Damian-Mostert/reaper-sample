@@ -28,6 +28,7 @@ export default function Home({data}:HomePageProps){
     },[]);
 
     return <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
+        <img src="/reaper.webp"/>
         <div>{data}</div>
         <button onClick={()=>loadApi("home-page",{
             reloaded:true
