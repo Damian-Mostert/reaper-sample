@@ -1,10 +1,7 @@
-import {homeViewPropsType} from "types/homeViewProps"
-//react
-import { useEffect } from "react";
-//reaper
-import { useListener, useApi, useNav, loadApi } from '@reaper/client';
-import { connectedEventType } from "@ts/connectedEvent";
-//types
+import { useListener, useNav, loadApi } from 'reaperjs/client';
+import { homeViewPropsType } from "types/homeViewProps"
+import { connectedEventType } from "types/connectedEvent";
+
 export default function Home({data}:homeViewPropsType){
     const nav = useNav(["welcome","test","done"]);
 
@@ -30,7 +27,8 @@ export default function Home({data}:homeViewPropsType){
     </div>
 }
 
-/*     const TestApi = useApi<testApiDataIn,testApiDataOut>("test");
+/*    
+    const TestApi = useApi<testApiDataIn,testApiDataOut>("test");
     
     const handle = async()=>{
         const response = await TestApi.call({
