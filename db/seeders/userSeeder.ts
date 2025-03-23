@@ -1,5 +1,5 @@
 
-import { Seeder } from "rprcli";
+import { Seeder } from "reaperjs";
 
 const userSeeder = new Seeder("users",(q)=>{
     
@@ -9,9 +9,7 @@ const userSeeder = new Seeder("users",(q)=>{
         email:"test@example.com",
         password:'test',
         admin:true,
-    }).then(res=>{
-        console.log("root admin created")
-    });
+    })
 })
 
 userSeeder.seed().then(res=>{

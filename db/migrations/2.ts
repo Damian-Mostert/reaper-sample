@@ -1,5 +1,5 @@
 import { Migration } from "reaperjs";
-export default Migration("users",{
+export default Migration("users2",{
     up(blueprint){
         blueprint.id()
         //blueprint.auth()

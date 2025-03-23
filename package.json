@@ -2,13 +2,14 @@
     "name": "reaper-example",
     "version": "0.1.0-example",
     "scripts": {
-        "dev": "npx rprcli dev",
-        "build": "npx rprcli build",
-        "migrate": "npx rprcli migrate",
-        "rollback": "npx rprcli rollback",
-        "seed": "npx rprcli seed",
-        "start": "npx rprcli start",
-        "vercel": "npx rprcli vercel"
+        "dev": "npx reaperjs dev",
+        "build": "npx reaperjs build",
+        "migrate": "npx reaperjs migrate",
+        "rollback": "npx reaperjs rollback",
+        "make": "npx reaperjs make",
+        "seed": "npx reaperjs seed",
+        "start": "npx reaperjs start",
+        "vercel": "npx reaperjs vercel"
     },
     "repository": {
         "type": "git",
@@ -22,7 +23,7 @@
     ],
     "dependencies": {
         "ejs": "latest",
-        "rprcli": "0.1.74-base"
+        "reaperjs": "latest"
     },
     "devDependencies": {
         "@types/react": "^18"
