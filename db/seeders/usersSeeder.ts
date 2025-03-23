@@ -1,9 +1,9 @@
 
+
 import { Seeder } from "reaperjs";
 
-const userSeeder = new Seeder("users",async(q)=>{
-    
-    q.create({
+const usersSeeder = new Seeder("users",async(query)=>{
+    await query.create({
         firstName:"test",
         lastName:"test",
         email:"test@example.com",
@@ -12,11 +12,7 @@ const userSeeder = new Seeder("users",async(q)=>{
     })
 })
 
-userSeeder.seed().then(res=>{
-
-}).catch(error=>{
-
-}).finally(()=>{
-
-})
+usersSeeder.seed().then(res=>{
+    console.info(`usersSeeder is done.`)
+});
 
