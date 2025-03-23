@@ -3,29 +3,16 @@ import {homeViewPropsType} from "types/homeViewProps"
 import { useEffect } from "react";
 //reaper
 import { useListener, useApi, useNav, loadApi } from '@reaper/client';
+import { connectedEventType } from "@ts/connectedEvent";
 //types
-import { messageFunnle } from "@ts/messageFunnle";
-import { testApiDataOut,testApiDataIn } from "@ts/testApiData";
-
 export default function Home({data}:homeViewPropsType){
     const nav = useNav(["welcome","test","done"]);
-    const messagesListener = useListener<messageFunnle>("messages");
-    const TestApi = useApi<testApiDataIn,testApiDataOut>("test");
-    
-    const handle = async()=>{
-        const response = await TestApi.call({
-            message:"test"
-        });
-        console.log(response)
-    };
 
-    messagesListener.on("message",(data)=>{
-        alert(data.message);
+    const connectedListener = useListener<connectedEventType>("connected");
+    connectedListener.on("connected",(data)=>{
+        console.info("socket connected!");
     });
     
-    useEffect(()=>{
-        handle();
-    },[]);
 
     return <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
         <img src="/reaper.webp"/>
@@ -42,3 +29,17 @@ export default function Home({data}:homeViewPropsType){
         </div>
     </div>
 }
+
+/*     const TestApi = useApi<testApiDataIn,testApiDataOut>("test");
+    
+    const handle = async()=>{
+        const response = await TestApi.call({
+            message:"test"
+        });
+        console.log(response)
+    };
+        useEffect(()=>{
+        handle();
+    },[]);
+
+ */
