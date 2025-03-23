@@ -1,7 +1,7 @@
 
 import { Seeder } from "reaperjs";
 
-const userSeeder = new Seeder("users",(q)=>{
+const userSeeder = new Seeder("users",async(q)=>{
     
     q.create({
         firstName:"test",
