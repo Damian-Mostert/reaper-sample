@@ -1,8 +1,8 @@
 import { Controller } from "reaperjs";
 import { homeViewPropsType } from "types/homeViewProps";
 
-const pageController:Controller={
-    async home(request,response){
+const pageController:Controller<"home">={
+    async home(request,response,next){
         response.render<homeViewPropsType>("home",{
             metadata:{
                 title:"Home",
